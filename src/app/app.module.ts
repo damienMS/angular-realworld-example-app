@@ -13,6 +13,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { CoreModule } from './core/core.module';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import 'emoji-picker-element';
+
+
 
 @NgModule({
   declarations: [AppComponent, FooterComponent, HeaderComponent],

@@ -69,6 +69,7 @@
             (click)="deleteArticle()">
             <i class="ion-trash-a"></i> Delete Article
           </button>
+          
         </span>
 
         <span [hidden]="canModify">
@@ -100,15 +101,29 @@
                   rows="3"
                   [formControl]="commentControl"
                 ></textarea>
+                <div  id="tooltip" role="tooltip" [hidden]="!showEmoji"  style="position: absolute;
+                z-index: 1; bottom: 30%;left: 50%; margin-left: -60px;">
+                  <emoji-picker ></emoji-picker>
+                  
+                </div>
               </div>
               <div class="card-footer">
                 <img [src]="currentUser.image || 'https://static.productionready.io/images/smiley-cyrus.jpg'" alt="user image" class="comment-author-img" />
                 <button class="btn btn-sm btn-primary" type="submit">
                  Post Comment
                 </button>
+                <button class="btn btn-sm action-btn"   (click)="insertEmoji()" type="button" >
+                  <i class="ion-happy-outline"  style="font-size: 18px;" ></i>
+                
+                </button>
+                
+                
               </div>
+              
             </fieldset>
+            
           </form>
+          
         </div>
 
         <div *appShowAuthed="false">

@@ -1,6 +1,8 @@
 import { Component, OnInit, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+import insertTextAtCursor from 'insert-text-at-cursor';
+
 
 import {
   Article,
@@ -25,6 +27,8 @@ export class ArticleComponent implements OnInit {
   commentFormErrors = {};
   isSubmitting = false;
   isDeleting = false;
+  showEmoji:boolean = false;
+  addEmoji:boolean =  true;
 
   constructor(
     private route: ActivatedRoute,
@@ -125,6 +129,24 @@ export class ArticleComponent implements OnInit {
           this.cd.markForCheck();
         }
       );
+  }
+
+
+  insertEmoji(){
+    if(this.addEmoji){ document.querySelector('emoji-picker').addEventListener('emoji-click', e => {
+      insertTextAtCursor(document.querySelector('textarea'), e.detail.unicode)
+      });
+      this.addEmoji = false;
+    }
+    if (this.showEmoji) {
+      this.showEmoji = false;
+      
+    }
+    else{
+      this.showEmoji = true;
+    }
+    
+    
   }
 
 }
