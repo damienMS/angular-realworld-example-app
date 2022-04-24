@@ -19,6 +19,12 @@ Ces lignes permettent de placer dans l'espace commentaire l'emoji sur lequel l'u
 La fonction insertEmoji permet de placer l'émoji selectionné via la fenêtre qui apparait, à l'endroit du curseur.\
 ![Code_3.png](_resources/Code_3.png)
 
+## Resultat final
+
+En cliquant sur le symbole **emoji**, l'utilisateur peut faire apparaitre la fenêtre de selection des emojis.\
+
+![Appli.png](_resources/Appli.png)
+
 ## Conclusion
 
 Cet exercice est interessant dans sa globalité, dans le sens où il nous a permis de nous positionner dans un cas similaire à celui d'une entreprise, dans le sens où on ne rentre pas forcément dans un code au départ. La plupart du temps, l'équipe de développement a déjà produit du code, et un nouvel arrivant doit le comprendre pour pouvoir travailler dessus. L'avantage de ce projet est que le découpage en composants est bien fait, ce qui permet de se repérer plus facilement dans le code.
