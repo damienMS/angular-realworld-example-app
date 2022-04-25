@@ -6,7 +6,11 @@ Le but de ce projet est de rentrer dans un code que nous n'avons pas fait, et d'
 
 L'ajout de notre fonctionnalité se faisant au niveau des commentaires, et donc des articles en eux-mêmes, ils nous a fallu modifier le composant *article* (le code étant bien décomposé au niveau des composants, chaque partie de l'application était facilement repérable).
 
-Les commentaires étant une partie d'un article, nous avons ajouter notre code à ce niveau
+Les commentaires étant une partie d'un article, nous avons ajouter notre code à ce niveau.
+
+Pour cela, nous avons importé la librairie *emoji-picker* dans app.module.ts, afin de pouvoir l'utiliser dans article.component.html.
+
+![Import.png](_resources/Import.png)
 
 ### article.component.html
 Ces lignes de code placent la fenêtre qui permet de faire apparaitre la liste des emojis.\
@@ -22,7 +26,6 @@ La fonction insertEmoji permet de placer l'émoji selectionné via la fenêtre q
 ## Resultat final
 
 En cliquant sur le symbole **emoji**, l'utilisateur peut faire apparaitre la fenêtre de selection des emojis.\
-
 ![Appli.png](_resources/Appli.png)
 
 ## Conclusion
